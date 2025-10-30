@@ -1,0 +1,17 @@
+{
+  "name": "ai-auto-linker",
+  "schemaVersion": "1.0",
+  "version": "1.0.0",
+  "description": "Suggest links between notes using AI",
+  "author": "Your Name",
+  "license": "MIT",
+  "permissions": ["readNotes", "writeLinks", "useAI"],
+  "recommendedPermissions": {
+    "readNotes": "Read note contents to compute suggestions",
+    "writeLinks": "Create/update backlinks",
+    "useAI": "Use configured AI adapter"
+  },
+  "entry": "main.wasm",
+  "events": ["onNoteSave", "onCommandPalette"],
+  "signature": ""
+}

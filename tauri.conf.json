@@ -1,0 +1,54 @@
+{
+  "package": {
+    "productName": "ObsidianPlusPlus",
+    "version": "0.3.0"
+  },
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build",
+    "devPath": "http://localhost:5173",
+    "distDir": "../dist"
+  },
+  "tauri": {
+    "bundle": {
+      "active": true,
+      "identifier": "com.spidersven.obsidianplusplus",
+      "icon": [
+        "src-tauri/icons/icon-128x128.png",
+        "src-tauri/icons/icon-512x512.png",
+        "src-tauri/icons/icon.ico"
+      ],
+      "resources": [],
+      "targets": [
+        "msi",
+        "nsis"
+      ],
+      "windows": {
+        "certificateThumbprint": "",
+        "timestampUrl": "http://timestamp.digicert.com",
+        "wix": {
+          "language": 1033
+        }
+      }
+    },
+    "allowlist": {
+      "all": false,
+      "fs": {
+        "all": false,
+        "readTextFile": true,
+        "writeFile": true,
+        "readDir": true,
+        "createDir": true,
+        "removeFile": true
+      },
+      "dialog": { "all": true },
+      "http": { "all": true },
+      "path": { "all": true },
+      "process": { "all": false },
+      "shell": { "all": false }
+    },
+    "security": {
+      "csp": "default-src 'self'; img-src 'self' data:; script-src 'self'; style-src 'self' 'unsafe-inline'; connect-src 'self' https: ws:;"
+    }
+  }
+}

@@ -1,0 +1,4 @@
+# Delete this file from the repository root.
+# Reason: This file is an Electron-style script using BrowserWindow from @tauri-apps/api.
+# Tauri manages windows from the Rust side (src-tauri/src/main.rs) and the renderer entry is src/main.tsx.
+# Remove main.ts to avoid accidental use and confusion.
